@@ -1,0 +1,25 @@
+---
+title: "Weekly"
+format:
+  revealjs:
+    width: 1920
+    height: 1080
+    menu: false
+    progress: false
+    auto-slide: 5000
+    loop: true
+    transition: fade
+    transition-speed: slow
+    background-transition: fade
+    title-slide-attributes:
+      data-background-image: https://drive.google.com/uc?export=view&id=14b3dgCVKeEnKekpr4mz4EZbA7x3YaCNK
+      data-background-size: 40%
+    theme: [default, custom.scss]
+    header-includes: <link href="https://drive.google.com/uc?export=view&id=1CNYS-obKqLtIho0tmDoOfBTlSHJ9E-UR" rel="icon" type="image/png">
+---
+
+```{r}
+#| cache: true
+#| output: asis
+bro::drive_gallery("photo/project/weekly")
+```

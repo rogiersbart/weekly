@@ -1,0 +1,2269 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-0.9.364">
+
+  <title>Weekly</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <script src="index_files/libs/clipboard/clipboard.min.js"></script>
+  <script src="index_files/libs/quarto-html/tabby.min.js"></script>
+  <script src="index_files/libs/quarto-html/popper.min.js"></script>
+  <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+  <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+  <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet">
+  <link id="quarto-text-highlighting-styles" href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-captioned.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-captioned) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-captioned.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-captioned .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-captioned .callout-caption  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-captioned.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-captioned.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-caption {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-caption {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-caption {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-captioned .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-captioned .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-captioned) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-caption {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-caption {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-caption {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-caption {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-caption {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link href="https://drive.google.com/uc?export=view&amp;id=1CNYS-obKqLtIho0tmDoOfBTlSHJ9E-UR" rel="icon" type="image/png">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="https://drive.google.com/uc?export=view&amp;id=14b3dgCVKeEnKekpr4mz4EZbA7x3YaCNK" data-background-size="40%" class="center">
+  <h1 class="title">Weekly</h1>
+</section>
+
+<section id="weekly-one-hundred-photographs" class="slide level2" data-background-image="https://drive.google.com/uc?export=download&amp;id=1N0TJ0iFr2Vsm8xLTasaKMeOhudWIaAjO" data-background-size="cover" data-background-opacity="0.5">
+<h2><b>Weekly</b><br> One hundred photographs</h2>
+<p><b>Weekly</b><br> One hundred photographs<br><br>This project was a weekly photograph creative challenge that ran for 100 weeks, from 2015-09-06 to 2017-07-31. The photograph here in the background, with me at Mexican Hat Rock, is courtesy of my wife.<br> <br> <a href="https://rogiersbart.github.io">Bart Rogiers</a><br> <br> This work is licensed under <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>.</p>
+
+<aside><div>
+<p>This is a <a href="https://quarto.org/docs/presentations/revealjs/">Quarto Revealjs presentation</a> with auto-play. Press “a” to start/pause the slideshow and “f” for fullscreen mode. You can find my notes and the download links in the speaker’s view by pressing “s”. Use “?” for an overview of keyboard shortcuts.</p>
+</div></aside></section>
+<section id="star" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1YdGEp-OYz7LbuSEl_LlJz-B0U1t2uUWj" data-background-size="contain">
+<h2>Star</h2>
+<aside class="notes">
+<p>Star<br><br>Headstone of a Jewish American soldier, fallen during the Second World War. Henri-Chapelle American Cemetery, Hombourg, Plombières, Belgium. Coordinates 50.697373142, 5.90055375117. Posted on 2017-07-31.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1ix-9AmgiNszmTQf8OtSkLl5af88ViV4Q">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="track" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1PyKTcfwnc1yvzlB_zLSi9LvJY0jIhsm6" data-background-size="contain">
+<h2>Track</h2>
+<aside class="notes">
+<p>Track<br><br>Overgrown railroad track. Old railway station of Raeren (part of the former ‘Vennbahn’ railway line), Belgium. Coordinates 50.6666021833, 6.13148725. Posted on 2017-07-24.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1xzONG6N9tlCh5iCgfd2HJsgxFd3G7Cs2">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="still-standing" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=18kdqer7SedW9k2h86_mgifwxBww9DtVe" data-background-size="contain">
+<h2>Still standing</h2>
+<aside class="notes">
+<p>Still standing<br><br>Mushrooms. Nieuwenhoven, Sint-Truiden, Belgium. Coordinates 50.8549074185, 5.21861945342. Posted on 2017-07-15.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1VTFJeFby_Jgy2tjHB6usGOmxQCDwE0i7">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="heavy-sustain" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1i5dj0YZnOvrXTllINgBUaifhjWjmso9P" data-background-size="contain">
+<h2>Heavy sustain</h2>
+<aside class="notes">
+<p>Heavy sustain<br><br>Cosmovox F20L electric organ. Alken, Belgium. Coordinates 50.8877582821, 5.29226218413. Posted on 2017-07-15.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1_Dl5DeONY6zKDDsm7zxh9YaD7j_umVzn">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="muzzle" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1VRV_HJSmsv01kbo2O6KkBF9KgNctRlrg" data-background-size="contain">
+<h2>Muzzle</h2>
+<aside class="notes">
+<p>Muzzle<br><br>Muzzle of a horse. Valley of the Mombeek, Alken, Belgium. Coordinates 50.8892489535, 5.31865512084. Posted on 2017-07-15.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1nUirxyH3OHMqWuv5pE60aoiTlen-GpfX">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="pile" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1HkAY95_kbNXviFxxbd5O0iR8395X0m5x" data-background-size="contain">
+<h2>Pile</h2>
+<aside class="notes">
+<p>Pile<br><br>Pile of stones. Spanish bay, 17-mile drive, Monterey, USA. Coordinates 36.6103718718, -121.947635073. Posted on 2017-06-24.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1jZGlXCXRViz4CwzPZD_jvmECvJzJVBgC">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="couple" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=10mojf5zEqc89c1fRXUQC5TfLHTBYSKjA" data-background-size="contain">
+<h2>Couple</h2>
+<aside class="notes">
+<p>Couple<br><br>Two butterflies. Valley of the Mombeek, Alken, Belgium. Coordinates 50.8894677957, 5.31839570406. Posted on 2017-06-19.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1X50HcIxXJs0tn4GaD3Ptjd4aqI5MNgrJ">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="crawling" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1Mq7A84GwJJuRLEi2XkFJhylB4gHS9Mrw" data-background-size="contain">
+<h2>Crawling</h2>
+<aside class="notes">
+<p>Crawling<br><br>Snail. Alken, Belgium. Coordinates 50.871966403, 5.30497258904. Posted on 2017-06-11.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1_soFBPiaqnbL-naDE3FaTbGZ2pCxZk8e">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="cart" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=176fN1px-HEoNIHodsCHTJxCSxGIugOHv" data-background-size="contain">
+<h2>Cart</h2>
+<aside class="notes">
+<p>Cart<br><br>Tonemapped HDR of a cart in a barn. Bokrijk open air museum, Genk, Belgium. Coordinates 50.9611878613, 5.40618976954. Posted on 2017-06-11.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=11txf2uZqnmcpurW2UzocEO4izYJ_HSbX">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="meet-the-lamb" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1Bh9HknIqrjUmm4Et3ZYqwrXKU8X0lUNL" data-background-size="contain">
+<h2>Meet the lamb</h2>
+<aside class="notes">
+<p>Meet the lamb<br><br>Child and lamb. Bokrijk open air museum, Genk, Belgium. Coordinates 50.9649837441, 5.4057016075. Posted on 2017-05-27.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=11U6QL5Cc2LQ4zuHnbDhAPOnAQD2G4zHX">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="sticks" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1Z63xmWcMA3zKg4Rad_Vc9aY3Z5Q_nvaE" data-background-size="contain">
+<h2>Sticks</h2>
+<aside class="notes">
+<p>Sticks<br><br>Timpani sticks, during live performance by the royal wind orchestra ‘Kunst na arbeid’ from Gors-Opleeuw. CC Panishof, Borgloon, Belgium. Coordinates 50.7873694924, 5.38826993111. Posted on 2017-05-22.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=10rx62yLk1mgCIkXmEFcOuiI6R5vJK5qo">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="train" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1eymxVB14ysmv2KMCUbaLM0JtS8LnCfEA" data-background-size="contain">
+<h2>Train</h2>
+<aside class="notes">
+<p>Train<br><br>Wooden toy train. Alken, Belgium. Coordinates 50.8719575169, 5.30502623323. Posted on 2017-05-13.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1XB7z9YSYKlKJCPJmsuVB00pR9Bsw-Ttm">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="dandelion" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1UxIvZb0UlkfEIArmh4AycOgzl9JGyya3" data-background-size="contain">
+<h2>Dandelion</h2>
+<aside class="notes">
+<p>Dandelion<br><br>Parachute ball. Valley of the Mombeek, Alken, Belgium. Coordinates 50.8884652827, 5.32295009497. Posted on 2017-05-07.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1shF4J0OsDVAvb4jyBg-pV3Ck0we09Lq0">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="petal" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1OEUCEYU5z_WRGQgsopYzFSsJwc5Snc8n" data-background-size="contain">
+<h2>Petal</h2>
+<aside class="notes">
+<p>Petal<br><br>Panorama of the inside of a tulip. Alken, Belgium. Coordinates 50.8719118159, 5.30510267616. Posted on 2017-04-29.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=12cwZV2C-nCjcGRkWzFAdLT9XuVevkSVr">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="duck" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1nkuW4P6hBFUoWp8uD6VbSC2ryXFo_FnF" data-background-size="contain">
+<h2>Duck</h2>
+<aside class="notes">
+<p>Duck<br><br>Rubber duck sitting at the edge of a bathtub. Alken, Belgium. Coordinates 50.8719118159, 5.30510267616. Posted on 2017-04-21.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1G7mUqugyolFcNUgnQFFuxaYqmTe1v0ny">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="tulip" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1k77MIs6ETVez79s3sqErBra2_bSPEceN" data-background-size="contain">
+<h2>Tulip</h2>
+<aside class="notes">
+<p>Tulip<br><br>Detail of a tulip. Alken, Belgium. Coordinates 50.8719939082, 5.30518850685. Posted on 2017-04-19.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1zRjOo-3XvAdUW7LKrC1RQOQf41cRRTGD">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="kraken" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1MPZDe2pzEvF8kVCImC2cqGVTem-B_nvU" data-background-size="contain">
+<h2>Kraken</h2>
+<aside class="notes">
+<p>Kraken<br><br>Detail of a pink Gerbera. Alken, Belgium. Coordinates 50.8719964471, 5.30506244302. Posted on 2017-04-09.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1ag-HaVTZX6RlZ9GqKDMXJTwnv7aNOUiE">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="sunflower" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1RFEng9bhfx5ZJ4tzziNQJ2vFfr5IXKUS" data-background-size="contain">
+<h2>Sunflower</h2>
+<aside class="notes">
+<p>Sunflower<br><br>Sunflower. Alken, Belgium. Coordinates 50.884018433, 5.32157948614. Posted on 2017-04-02.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1gpnDvKyF7iQJ_73LMrXVaEkn8fPVecRS">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="peuter-met-appel" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1GwsBuOv3ARxOdgcZgeuIoptD_TUl8TkG" data-background-size="contain">
+<h2>Peuter met appel</h2>
+<aside class="notes">
+<p>Peuter met appel<br><br>Toddler with apple (‘Peuter met appel’ in Dutch). Alken, Belgium. Coordinates 50.8719499, 5.30516302586. Posted on 2017-03-26.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1qUWEvYtxP8e24tm89xUnHcPmG-1mDvYH">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="toddler-with-apples." class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1203F7eizGuqcoNxXYJk_tztY8RD7kqoO" data-background-size="contain">
+<h2>Toddler with apples.</h2>
+<aside class="notes">
+<p>Toddler with apples.<br><br>Toddler with apples. Alken, Belgium. Coordinates 50.8719499, 5.30516302586. Posted on 2017-03-19.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1QgE3Fi5p9mKduaqnLMHb_K5ZCq0KmBLx">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="vase" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1qjX-DH9Tz3bHe7fcyJT3sjQN9_2Evtvp" data-background-size="contain">
+<h2>Vase</h2>
+<aside class="notes">
+<p>Vase<br><br>Two flowers in a glass vase. Alken, Belgium. Coordinates 50.8719324641, 5.3052412765. Posted on 2017-03-12.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1S-MhjPhLHta2JOhrFU78iF3HSeOf1pfC">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="foliage" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1FJKDT90G-gBWeCXw56GybGjDX4bgoaBN" data-background-size="contain">
+<h2>Foliage</h2>
+<aside class="notes">
+<p>Foliage<br><br>Leaves on bare soil. Alken, Belgium. Coordinates 50.8839522111, 5.3215358071. Posted on 2017-03-05.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1HzrxCctCGqKlfN_VLNwkWv62BzdI15-h">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="geese" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1JIjihhKqdRWH67TOtacmQtHjKUxKHgnQ" data-background-size="contain">
+<h2>Geese</h2>
+<aside class="notes">
+<p>Geese<br><br>Geese in the mist on the remains of a cornfield. Alken, Belgium. Coordinates 50.8848889, 5.33585913333. Posted on 2017-03-05.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1i-mMS86YaEDu3FteBCIs8kOXNCQ34Yub">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="deserted" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1GVdKcHQzcKoHjj0yJH1M4eRSWYuG8MHS" data-background-size="contain">
+<h2>Deserted</h2>
+<aside class="notes">
+<p>Deserted<br><br>Deserted playground. Alken, Belgium. Coordinates 50.87543805, 5.31040573333. Posted on 2017-02-17.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1Nbc_SaNycRazEvANZdVvca6YLxL2IqFi">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="car" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1EKED2ylkP3g8EwRy3vAxEGn7zgyQUrBi" data-background-size="contain">
+<h2>Car</h2>
+<aside class="notes">
+<p>Car<br><br>Car hood, wiper and windshield covered in snow. Alken, Belgium. Coordinates 50.871871803, 5.3053019533. Posted on 2017-02-11.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1dQwHgSXKA119XMnUhqPa9u_Fta12xnlh">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="tea-time" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1jkYH4PMnOzInbxqMi6K38UFfavLT3vn-" data-background-size="contain">
+<h2>Tea time</h2>
+<aside class="notes">
+<p>Tea time<br><br>Turkish tea. Göreme, Turkey. Coordinates 38.6407846291, 34.8176544962. Posted on 2017-02-04.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1fLYr5c9Hr6yYoLFGnA8JmTN5oThCRZS_">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="trees" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1v0c9U9xv3Lv-6YuodJ9DJzrEXS9QqVwk" data-background-size="contain">
+<h2>Trees</h2>
+<aside class="notes">
+<p>Trees<br><br>Trees in front of a sunset. Valley of the Mombeek, Alken, Belgium. Coordinates 50.8868361305, 5.3241169523. Posted on 2017-01-27.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=10NozmDkGIjZDJ6gQngHJCNGB7QYxi7Ec">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="portrait" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1cM6KdshGqNq-r7VcYD6KPA-89LTw0Ns_" data-background-size="contain">
+<h2>Portrait</h2>
+<aside class="notes">
+<p>Portrait<br><br>Portrait of a tree. Alken, Belgium. Coordinates 50.8827984705, 5.3322842704. Posted on 2017-01-20.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1OUkF-0Rb8A96Ih4wZODVXS4tRy2vUjQS">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="birches-in-fog" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1eE4ZGuHm00fCtuP9XL55hrR06eM0uRAo" data-background-size="contain">
+<h2>Birches in fog</h2>
+<aside class="notes">
+<p>Birches in fog<br><br>Birches in fog, valley of the Mombeek, Alken, Belgium. Coordinates 50.8870913965, 5.3241989712. Posted on 2017-01-14.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1UWuhhd25ZIOwb3kHV1vpmeCyzcFqBu1O">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="frozen" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1sKaSYr75pRL5WHg37H0H5hR1vlMDQQnb" data-background-size="contain">
+<h2>Frozen</h2>
+<aside class="notes">
+<p>Frozen<br><br>Frozen cornfield remains, Alken, Belgium. Coordinates 50.8851790119, 5.3229121197. Posted on 2017-01-07.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1tGrODrddQhQpAmay6_QncR_fii4faFiz">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="seawall-and-beach" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1Rf4r67xT7Z5_1I8VvBXHnvJuIA0AqCw8" data-background-size="contain">
+<h2>Seawall and beach</h2>
+<aside class="notes">
+<p>Seawall and beach<br><br>Seawall and beach, Ostend, Belgium. Coordinates 51.2339097316, 2.9148562027. Posted on 2016-12-31.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1RO7ZWxgKLPo0mmEnwZn5epjS53N-golg">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="sunset" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1pFxVk0vNWzsrmOuN7XsCib-dvgr2dT24" data-background-size="contain">
+<h2>Sunset</h2>
+<aside class="notes">
+<p>Sunset<br><br>Tonemapped HDR of a sunset above sea, Oostende, Belgium. Coordinates 51.233921707, 2.91483004642. Posted on 2016-12-24.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1idW6L2yGn6H477wEDubPL8kIxK5cJR80">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="alley" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1NT2ZaGECl-9anLVnuUnTD7MH7H1tvoZt" data-background-size="contain">
+<h2>Alley</h2>
+<aside class="notes">
+<p>Alley<br><br>Tonemapped HDR of the Rue du Mont de Piété, Liège, Belgium. Coordinates 50.6469803333, 5.58439383333. Posted on 2016-12-18.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1qlXTWBySDRiYBB9ACyyuI58SE7cA1Qh9">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="place-saint-barthlemy" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1cRtDRReJBpCO_2rtd4ZQHeTPANTpi1kI" data-background-size="contain">
+<h2>Place Saint-Barth?lemy</h2>
+<aside class="notes">
+<p>Place Saint-Barth?lemy<br><br>Tonemapped HDR of ‘Place Saint-Barthélemy’, with ‘la collégiale Saint-Barthélemy’ in the background, Liège, Belgium. Coordinates 50.6473868346, 5.58257013252. Posted on 2016-12-09.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1jB_BzYbKr7niTS6GZO899IKhn7dN9l-k">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="selfie" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1lJlX49GxYdFAUcBv-5KfJYVvp3lvwdke" data-background-size="contain">
+<h2>Selfie</h2>
+<aside class="notes">
+<p>Selfie<br><br>Selfie, taken at the Rue du Mont de Piété, Liège, Belgium. Coordinates 50.6471900113, 5.58434051521. Posted on 2016-12-03.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1X7a35JYLZjRo6IfUlkaR2gGkBcxfMTZJ">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="aglais-io" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1BsHvfRyFYMs19RTdIDkVLtLGMF2TZO72" data-background-size="contain">
+<h2>Aglais io</h2>
+<aside class="notes">
+<p>Aglais io<br><br>European Peacock (Aglias io) at the valley of the Mombeek, Alken, Belgium. Coordinates 50.8894191628, 5.31863130093. Posted on 2016-11-29.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1Oh5xrv9Zu7cDIc0kBssYgONlsfLuNpPq">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="wired" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1JJMT0k9RoAB5qKaleo1oyOw77JH5tpMi" data-background-size="contain">
+<h2>Wired</h2>
+<aside class="notes">
+<p>Wired<br><br>Grass seed stalk with spiderweb and morning dew, Alken, Belgium. Coordinates 50.8720079333, 5.30502731667. Posted on 2016-11-19.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1VLa5pnxI-mFfJhrCYbTPGeK--S8OxA83">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="raking-leaves" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1pRtNovP6KVzULwc8vwvXthhsjionwCbU" data-background-size="contain">
+<h2>Raking leaves</h2>
+<aside class="notes">
+<p>Raking leaves<br><br>Leaves, in front of an out-of-focus rake, Alken, Belgium. Coordinates 50.8832127667, 5.32535535. Posted on 2016-11-14.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1RXvGHJRfIfJXRppO03TGojFu_PhWIUGB">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="trio" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1jXATN1Rz4qTGhnmfTsuGxxv7h_05S7ND" data-background-size="contain">
+<h2>Trio</h2>
+<aside class="notes">
+<p>Trio<br><br>A trio of fungi in the grass. Alken, Belgium. Coordinates 50.8880080333, 5.32695496667. Posted on 2016-11-05.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=16qZy8FLGrC0RPBSd5TpPA7sGCRn-AbYu">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="catching-up" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1LWXBql7que30A4Mll_Zqe9qZgV7UMro2" data-background-size="contain">
+<h2>Catching up</h2>
+<aside class="notes">
+<p>Catching up<br><br>Hot air balloons. Göreme, Cappadocia, Turkey. Coordinates 38.6657584252, 34.8515648245. Posted on 2016-10-30.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1swIgrdwyl66GZxGXvTEiUdj---34HkBx">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="humbucker" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1NVob4HrxcnKgsZ7aG3HsxXJ8kd4xVxq6" data-background-size="contain">
+<h2>Humbucker</h2>
+<aside class="notes">
+<p>Humbucker<br><br>Humbucker and toggle switch of a Custom SG Double Neck (Matsumoku 70’s) guitar. Alken, Belgium. Coordinates 50.8719647102, 5.30515162967. Posted on 2016-10-22.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1N4YPfIIv-G5UvmV30kuJ52S2oXh29IYG">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="balance" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1w94KW_OSRF52g1SGx_Fq6nQYq1uagbsF" data-background-size="contain">
+<h2>Balance</h2>
+<aside class="notes">
+<p>Balance<br><br>Two ring-tailed lemurs (Lemur catta), at the Planckendael zoo, Mechelen, Belgium. Coordinates 51.0007133837, 4.51859392882. Posted on 2016-10-14.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1Rv4CBgABMnQB3YnZhrxDtjjbaNL9dmJ1">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quartet" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1PyGF0ocT6LZZU9T0byRXIPb3_Ktl0nGr" data-background-size="contain">
+<h2>Quartet</h2>
+<aside class="notes">
+<p>Quartet<br><br>Four Visayan Warty Pigs (Sus cebifrons) at the Planckendael zoo, Mechelen, Belgium. Coordinates 51.0014632833, 4.51099843333. Posted on 2016-10-09.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1LiUWjQTVuvbICVEtWXfL-KmqFaQjnocS">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="target-in-sight" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=10rWSoMWUv9iprmC0_9CwdQWyBu3mSkYQ" data-background-size="contain">
+<h2>Target in sight</h2>
+<aside class="notes">
+<p>Target in sight<br><br>Cheetah (Acinonyx jubatus), at the Planckendael zoo, Mechelen, Belgium. Coordinates 50.9985884981, 4.52004483724. Posted on 2016-09-30.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=19obb3rn5ED3wybCNc7si4hyguty9WBpi">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="maucauco" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=18ycDoJSRoQE3vkh1_0_q6fjp-ciyuV4N" data-background-size="contain">
+<h2>Maucauco</h2>
+<aside class="notes">
+<p>Maucauco<br><br>Ring-tailed lemur (Lemur catta; ‘maucauco’ was a common term for lemurs in the 18th century), at the Planckendael zoo, Mechelen, Belgium. Coordinates 51.0007133837, 4.51859392882. Posted on 2016-09-24.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1-MEh-zR_eWCbs6dqnPgnEwePAkg7dbcj">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="broken" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1r9Y_Deg7b4-eQM3t3MXj6phXHwl0rnpC" data-background-size="contain">
+<h2>Broken</h2>
+<aside class="notes">
+<p>Broken<br><br>Tonemapped HDR of a set of broken gauges in a locomotive, at the old railway station of Raeren (part of the former ‘Vennbahn’ railway line), Belgium. Coordinates 50.6653794, 6.13002611668. Posted on 2016-09-16.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1O2YBs3HAq2AhVeMGa5XoFBU8swEpCRJb">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="forest" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=14jPXHq9iZPziGUnYvUwhSMXphcKiGEu4" data-background-size="contain">
+<h2>Forest</h2>
+<aside class="notes">
+<p>Forest<br><br>Installation by Martin Steinert titled ‘Esquisse en bois sur fond noir’, at the Grand Curtius museum, Liège, Belgium. Coordinates 50.6470133281, 5.5833659048. Posted on 2016-09-12.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1EJxrcelK5txrcEiK0xz5k47cOibMearb">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="rooftops" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1dY_TldzqpdgKA1rvOrhRCSQomV2amlMT" data-background-size="contain">
+<h2>Rooftops</h2>
+<aside class="notes">
+<p>Rooftops<br><br>Panoramic view of Ostend, Belgium. Coordinates 51.233800628, 2.91500045034. Posted on 2016-09-02.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1_JBDCccUvAZSzAhr22yQ7yLPvwHOLqLU">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="piled-up" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1gwJ8JVeT81BX-OpmwHl47hSTj8XD37Ho" data-background-size="contain">
+<h2>Piled up</h2>
+<aside class="notes">
+<p>Piled up<br><br>Stack of animals by muralist ROA (part of The Crystal Ship festival), at the intersection of the Hofstraat and the Platformstraat, Ostend, Belgium. Coordinates 51.2342857457, 2.9184952272. Posted on 2016-08-26.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1DVDawwEWoUkYX_iYVjDuHD0x3QQwDjI-">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="conducting" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1E1Ob-A_TrpRe9YxxeYwdCRrpX4cwWC3v" data-background-size="contain">
+<h2>Conducting</h2>
+<aside class="notes">
+<p>Conducting<br><br>Conductor conducting during live performance by the royal wind orchestra ‘Kunst na arbeid’ from Gors-Opleeuw, in CC Panishof, Borgloon, Belgium. Coordinates 50.7874317549, 5.38792299627. Posted on 2016-08-23.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1PVFoFQrysIIazXW1UV0mJVIuvhQh2AEE">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="spot-of-light" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1ygC4xrRSH5WbBEomsPD6Hl5MTHAehzu_" data-background-size="contain">
+<h2>Spot of light</h2>
+<aside class="notes">
+<p>Spot of light<br><br>Tonemapped HDR of a sunbreak above sea, Oostende, Belgium. Coordinates 51.233921707, 2.91483004642. Posted on 2016-08-12.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1wC9kuebV6iX56qjl2EsPlrjXSM2ADPc6">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="overgrown" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1oqbJ4vdTWruQn9WGf4w1ln8pYSTo1lH6" data-background-size="contain">
+<h2>Overgrown</h2>
+<aside class="notes">
+<p>Overgrown<br><br>Overgrown railway car, at the old railway station of Raeren (part of the former ‘Vennbahn’ railway line), Belgium. Coordinates 50.6661423167, 6.13132496667. Posted on 2016-08-07.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1_O-Jw5oD9O3pnbJzhoOFE6zUU3B4IK2E">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="sliding-aerophones" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1WkgErBjLXiAoRk_KFRNKtKay89h9uokk" data-background-size="contain">
+<h2>Sliding aerophones</h2>
+<aside class="notes">
+<p>Sliding aerophones<br><br>Trombones (which are sliding aerophones), during live performance by the royal wind orchestra ‘Kunst na arbeid’ from Gors-Opleeuw, in CC Panishof, Borgloon, Belgium. Coordinates 50.7874317549, 5.38792299627. Posted on 2016-07-30.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1BRZxKkJqe7q0dA7e1ME_E5HqzshBC_GJ">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="harvesting" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1NQZ7dfbQk95NIhh1v5rOtyi1g_2PUjWa" data-background-size="contain">
+<h2>Harvesting</h2>
+<aside class="notes">
+<p>Harvesting<br><br>Bee harvesting nectar, Alken, Belgium. Coordinates 50.8842238213, 5.32169222733. Posted on 2016-07-22.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1kfX1nvDfr2iW5OCtNKD0PkJ2tZ_TtJLC">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="into-the-water" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1VQ4kcKbG_8xrVePXkbR0_8G-YHTj-EKw" data-background-size="contain">
+<h2>Into the water</h2>
+<aside class="notes">
+<p>Into the water<br><br>Giant Canada geese (Branta canadensis maxima) entering the water, Kelmis, Belgium. Coordinates 50.7100914833, 6.01326821667. Posted on 2016-07-16.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1v2992Q13FSzOj3XX7UBluYt-31BZlVVc">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="apsis" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1wes_NvgWq6bmOg3InXOtSQnA1i4irz4y" data-background-size="contain">
+<h2>Apsis</h2>
+<aside class="notes">
+<p>Apsis<br><br>Tonemapped HDR panorama of the apse (apsis in Latin) in the main church of Alken, Belgium. Coordinates 50.8755782271, 5.30764040679. Posted on 2016-07-16.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1ckem_V99fbtpqw5uRUY_DNT0kWwF5lkP">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="baritone" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1zK1wKkyvA2yb7Wa3BxyxkTrwKoj258kf" data-background-size="contain">
+<h2>Baritone</h2>
+<aside class="notes">
+<p>Baritone<br><br>Baritone horn player, during live performance by the royal wind orchestra ‘Kunst na arbeid’ from Gors-Opleeuw, in CC Panishof, Borgloon, Belgium. Coordinates 50.7874317549, 5.38792299627. Posted on 2016-07-03.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1sBLLarixxWlrFWg7mBBRlzVCHPXfA6vG">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="cymbal-choke" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1DReomL3z4pXUMCBK2CM2dQZCm2X800GQ" data-background-size="contain">
+<h2>Cymbal choke</h2>
+<aside class="notes">
+<p>Cymbal choke<br><br>Percussionist performing a cymbal choke, during live performance by the royal wind orchestra ‘Kunst na arbeid’ from Gors-Opleeuw, in CC Panishof, Borgloon, Belgium. Coordinates 50.7874317549, 5.38792299627. Posted on 2016-06-26.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1msdXtfi-rHjk2efY-BoeNpiqxYVsxlKt">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="timpanist" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1o-6NIIBdwPmpZGSa5QWPwhVw4xdhAAom" data-background-size="contain">
+<h2>Timpanist</h2>
+<aside class="notes">
+<p>Timpanist<br><br>Timpanist, during live performance by the royal wind orchestra ‘Kunst na arbeid’ from Gors-Opleeuw, in CC Panishof, Borgloon, Belgium. Coordinates 50.7874317549, 5.38792299627. Posted on 2016-06-19.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1uvfbEY3VnIZmLI4N4SznbYt9RI4b6di-">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="grazing-in-spring" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=17sFoBtqVfWCw4w8_WxpCCcQqC7tDBQNS" data-background-size="contain">
+<h2>Grazing in spring</h2>
+<aside class="notes">
+<p>Grazing in spring<br><br>Horses grazing in spring, Alken, Belgium. Coordinates 50.8870913965, 5.3241989712. Posted on 2016-06-12.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1MTmYFEHH-OnQ4L1opLHWqv6usshYNlmB">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="drivers-seat" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1390PjqhWDF8rAMfVhZElqAT7ywXvHi1u" data-background-size="contain">
+<h2>Driver’s seat</h2>
+<aside class="notes">
+<p>Driver’s seat<br><br>Exposure fusion of the driver’s seat and dashboard in a railway wagon at the old railway station of Raeren (part of the former ‘Vennbahn’ railway line), Belgium. Coordinates 50.6655069, 6.12998721669. Posted on 2016-06-04.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1hMJE3CpxOzQeDeCtJ6zyQVreMJtV9rXc">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="morning-dew" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1JOsOiQMvBHlK1b6PYdsKxToKa1AHGJwm" data-background-size="contain">
+<h2>Morning dew</h2>
+<aside class="notes">
+<p>Morning dew<br><br>Morning dew on grass, Mombeek valley, Alken, Belgium. Coordinates 50.8871484467, 5.33559738417. Posted on 2016-05-27.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=17ssyCVnFpsd01IsVbU3wowmF7LHtmYIO">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="passenger-car" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1o9xQbeD2bIDOGTQZgAUydoG_bvFHZh6U" data-background-size="contain">
+<h2>Passenger car</h2>
+<aside class="notes">
+<p>Passenger car<br><br>Tonemapped HDR of the hallway of a passenger car, at the old railway station of Raeren (part of the former ‘Vennbahn’ railway line), Belgium. Coordinates 50.6664959333, 6.13218060007. Posted on 2016-05-22.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1elvLSrW1CezC-3zD_ahgu1dUgcUMQwvj">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="bass-tab" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1MmHlBRJBSbHREGltBH59Shb7vHEUNJUs" data-background-size="contain">
+<h2>Bass tab</h2>
+<aside class="notes">
+<p>Bass tab<br><br>Standard notation and tablature excerpt from the bass guitar arrangement for Bach’s Cello Suite no. 1 in G major (BWV 1007) by Matt Scharfglass, Alken, Belgium. Coordinates 50.8719647102, 5.30515162967. Posted on 2016-05-15.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1E31wUw_nAVoW14ipnvqFJ5nfDD0kvaC0">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="blossom" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1Px7bW8w7TDpiAraV87hW2qYSbRhoOrky" data-background-size="contain">
+<h2>Blossom</h2>
+<aside class="notes">
+<p>Blossom<br><br>Pear tree blossom at an orchard, Alken, Belgium. Coordinates 50.8834244723, 5.32235598883. Posted on 2016-05-06.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=16J4FPUIwgqVilFa-cvMz7zBNKS0na7ID">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="nut" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1vztccCqkF2gaZWue-YPG7gyKTkJc2lLl" data-background-size="contain">
+<h2>Nut</h2>
+<aside class="notes">
+<p>Nut<br><br>Nut of the twelve-string neck of a Custom SG Double Neck (Matsumoku 70’s) guitar, Alken, Belgium. Coordinates 50.8719647102, 5.30515162967. Posted on 2016-05-01.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=13dHaaJS0YmRmEdNdaXKGPUNCiNI2QMTB">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="wheres-that-fish-they-promised-us" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1asom59rBK3ch_uESX1FKtsKVAJmxAnln" data-background-size="contain">
+<h2>Where’s that fish they promised us?</h2>
+<aside class="notes">
+<p>Where’s that fish they promised us?<br><br>Humboldt penguins (Sphenisci humboldti), at the Planckendael zoo, Mechelen, Belgium. Coordinates 50.9990040238, 4.51574600067. Posted on 2016-04-25.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=13IyCmHZGMeGplB2Con5ZAzWK9_Shkiyb">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="rusty-ride" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1T7js4dtY96EV7Q2rP7988U6GoP1r_Afv" data-background-size="contain">
+<h2>Rusty ride</h2>
+<aside class="notes">
+<p>Rusty ride<br><br>Rusty bicycles at the Planckendael zoo, Mechelen, Belgium. Coordinates 51.0009510968, 4.51550191967. Posted on 2016-04-17.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1T_1qZFLRmXzmRCEUX3e5jt2ewyT841EV">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="beach" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1x9-atEOpZWE6y0KHZVBBAhxl4eKfURGW" data-background-size="contain">
+<h2>Beach</h2>
+<aside class="notes">
+<p>Beach<br><br>Parasols and sunloungers at Iztuzu Beach, Dalyan, Turkey. Coordinates 36.80115956, 28.6051372322. Posted on 2016-04-11.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1KHxdW95swiYdjNsDJcrDKwb_Or2QYYcC">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="unicornis" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1BoDD7ID_HUTm52TQjnXGCyjW2vp_ZUpx" data-background-size="contain">
+<h2>Unicornis</h2>
+<aside class="notes">
+<p>Unicornis<br><br>Indian rhinoceros (Rhinoceros unicornis), at the Planckendael zoo, Mechelen, Belgium. Coordinates 51.001189939, 4.51683497417. Posted on 2016-04-02.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1dqOnaqNOGcAQmD6mbCa5v8RDXSIVs4jH">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="crossing-the-line" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1qH522uJ3eAwdH7tTPsiJoTmEZYojK3uL" data-background-size="contain">
+<h2>Crossing the line</h2>
+<aside class="notes">
+<p>Crossing the line<br><br>Snail crawling on tiles, Alken, Belgium. Coordinates 50.8876810232, 5.29228574033. Posted on 2016-03-27.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1zDYYZsS8mmSOWiWQEKvvLVqL14wXpmD_">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="across-the-wire-fence" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1a0zv5JFfZqO6994BjNIV0ZLD9CAShvw3" data-background-size="contain">
+<h2>Across the wire fence</h2>
+<aside class="notes">
+<p>Across the wire fence<br><br>Horse grazing across a wire fence, Alken, Belgium. Coordinates 50.8867317723, 5.3160796165. Posted on 2016-03-21.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=155-bPpBoQKOScTBoJDYiqjg7jm0qg96K">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="wilson-arch" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1EU-5k4lAydIe6qmfPYUDoEHBvHC8zAeD" data-background-size="contain">
+<h2>Wilson Arch</h2>
+<aside class="notes">
+<p>Wilson Arch<br><br>Tonemapped HDR of Wilson Arch, Utah, USA. Coordinates 38.2735554715, -109.372871925. Posted on 2016-03-12.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1u2oXWLpXPqRWoRk2uolHdQjoxcyoZXHJ">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="behind-bars" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=17CptwHHdGABdbrXKbyneEAnYy8lkGMAp" data-background-size="contain">
+<h2>Behind bars</h2>
+<aside class="notes">
+<p>Behind bars<br><br>Bird behind wire fence at the Planckendael zoo, Mechelen, Belgium. Coordinates 51.0018271265, 4.512994051. Posted on 2016-03-06.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1N71KCW7jdrax7Xz0ZOE3MrvjhcCpR-Ow">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-miners-grave" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1Wp49x31Lo2qpjQRY5yhx23fsoSKV4Yrt" data-background-size="contain">
+<h2>A miner’s grave</h2>
+<aside class="notes">
+<p>A miner’s grave<br><br>Tonemapped HDR of Calico Ghost Town, taken from the town’s graveyard, Yermo, California, USA. Coordinates 34.9451715105, -116.867161723. Posted on 2016-02-26.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1sPMbgGZLzuSF7iUTKb11SCqOnilDexAa">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="sombrero" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1ndI85xgZoFUTmH8zS0Z7KlVA48GU8mpQ" data-background-size="contain">
+<h2>Sombrero</h2>
+<aside class="notes">
+<p>Sombrero<br><br>Tonemapped HDR of Mexican Hat Rock, Mexican Hat, Utah, USA. Coordinates 37.1749740333, -109.860049583. Posted on 2016-02-20.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1ZsEyi3wI2AEDXlYSw7WoT7EmemXgf5F7">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="downstream" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=110R1lHTpEjQoPNm2oJcxX7c85VM489Nk" data-background-size="contain">
+<h2>Downstream</h2>
+<aside class="notes">
+<p>Downstream<br><br>Another Tonemapped HDR of the Kaweah River, Three Rivers, California, USA. Coordinates 36.4155887333, -118.927949833. Posted on 2016-02-14.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1XD5YdV6NruYNWb_lrxPQaXOf3KwdEjv0">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="tse-bighanilini" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1-plLL-SJOeDejqVS5wycUN-JtKzqaDBw" data-background-size="contain">
+<h2>Tse bighanilini</h2>
+<aside class="notes">
+<p>Tse bighanilini<br><br>Upper Antelope Canyon, Arizona, USA. Coordinates 36.8625125712, -111.374693695. Posted on 2016-02-08.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1qAYDTTxACKiJcfBQaWrbktnvqPU57Zs6">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="deconstructivism" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1JB_0EdEz025StvSkmo8XVIcg_20EwTGi" data-background-size="contain">
+<h2>Deconstructivism</h2>
+<aside class="notes">
+<p>Deconstructivism<br><br>Tonemapped HDR of the entrance of the Walt Disney Concert Hall by Frank Gehry, Los Angeles, California, USA. Coordinates 34.0558491443, -118.249047878. Posted on 2016-01-29.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1xRoaXzlvRBWs5_Z1YzkzucXe_59q33EW">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="u.s.-army-rail-tank-car" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1h04KZzBNqAgO3CZSSCFkLi_2dZF2Xkqj" data-background-size="contain">
+<h2>U.S. Army rail tank car</h2>
+<aside class="notes">
+<p>U.S. Army rail tank car<br><br>Tonemapped HDR of a U.S. Army rail tank car at Route 66, Williams, Arizona, USA. Coordinates 35.2529372012, -112.18371901. Posted on 2016-01-22.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1QuXYjzGk8l25xRnScWh-3RWOn3FcCxhl">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="shoeprints-in-the-sand" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1183P-i9c4-yQCuto4jwpHMPVGJRw_CIe" data-background-size="contain">
+<h2>Shoeprints in the sand</h2>
+<aside class="notes">
+<p>Shoeprints in the sand<br><br>Shoeprints in the sand, at the Iztuzu Beach, Köyceğiz-Dalyan, Turkey. Coordinates 36.8014301693, 28.6039999755. Posted on 2016-01-16.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1hC4UjJw308odiJh2z5IW-YEW0AqvVzvO">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="wrapped-bales-of-grass" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1HaP4gBRQ1IFv0BQAYBn3Zmc0fR41EUZd" data-background-size="contain">
+<h2>Wrapped bales of grass</h2>
+<aside class="notes">
+<p>Wrapped bales of grass<br><br>Tonemapped HDR of a set of wrapped bales of grass, Alken, Belgium. Coordinates 50.8869009807, 5.3355095385. Posted on 2016-01-09.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1nfEs89fQqse64IZ0dARBIRqluXsLJhPr">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="grazing-in-the-late-autumn-sun" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1Dw0hDN-g_PQQW29NjMvsjEIhJBjbeCp-" data-background-size="contain">
+<h2>Grazing in the late autumn sun</h2>
+<aside class="notes">
+<p>Grazing in the late autumn sun<br><br>Exposure fusion of some cows grazing in the late autumn sun, Alken, Belgium. Coordinates 50.8837214535, 5.33236598967. Posted on 2016-01-02.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1IMEJgbgQU5NnBu0CiEr6q4L0h1xMXlGQ">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="marmaris-coastline" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1UySLIAViVRMHrHhSqkY3c3Nw-wL36pmp" data-background-size="contain">
+<h2>Marmaris coastline</h2>
+<aside class="notes">
+<p>Marmaris coastline<br><br>Panorama of the coastline, just before sunrise, at Marmaris, Turkey. Coordinates 36.8370026632, 28.2488459943. Posted on 2015-12-28.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1q9kQ5MwRdcNKrInK1UV67KWsQuMHTsqo">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="collective-take-off" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=11QVO5811ogDS8QqwsQnai-8m7eDy3Buo" data-background-size="contain">
+<h2>Collective take off</h2>
+<aside class="notes">
+<p>Collective take off<br><br>Collective hot air balloon take off, Göreme, Cappadocia, Turkey. Coordinates 38.6631447167, 34.8479599333. Posted on 2015-12-20.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1f395jhp-iLqkYE431BwCYOYfepZQLQz6">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="cappadocian-sunrise" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1iumpS22dxbzN3oaaT6dSWF2fp4NR0Q3w" data-background-size="contain">
+<h2>Cappadocian sunrise</h2>
+<aside class="notes">
+<p>Cappadocian sunrise<br><br>Sunrise during a hot air balloon flight, Göreme, Cappadocia, Turkey. Coordinates 38.6657584252, 34.8515648245. Posted on 2015-12-13.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1tkVfxqdwkArHmIxPrd89C17nPl6nkr3T">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ay-yildiz" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1Rrd7ETlpFIZfZDzMZluIIFkjt2AD1RXa" data-background-size="contain">
+<h2>Ay Yildiz</h2>
+<aside class="notes">
+<p>Ay Yildiz<br><br>Two people on a ridge watching an approaching hot air balloon with the Turkish flag (Ay Yildiz - Moon Star), Göreme, Turkey. Coordinates 38.6657584252, 34.8515648245. Posted on 2015-12-06.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=15wNu9cYCDvT7uYbY2YsFmfpYvRNCqJj3">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="i-need-a-pedicure" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1HbwalK8R3N4f8GrM1FZgcPeJtRta-1tP" data-background-size="contain">
+<h2>I need a pedicure</h2>
+<aside class="notes">
+<p>I need a pedicure<br><br>A female white-cheeked gibbon (Nomascus leucogenys) at the Planckendael zoo, Mechelen, Belgium. Coordinates 51.001619514, 4.513482213. Posted on 2015-11-28.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1hl3K5ZsASt0btxxXL-y2z78N8gowDgWz">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="late-night-snack" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1Bva6o5AYlwWJZPLH_zW025Er4Kjr1ZIT" data-background-size="contain">
+<h2>Late night snack</h2>
+<aside class="notes">
+<p>Late night snack<br><br>Some people fishing, at sunset, near the port of Marmaris, Turkey. Coordinates 36.85119955, 28.2727525167. Posted on 2015-11-21.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1ncn4NEwj7UWxmYS1LmW_7CCmagAC3v-Z">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="silver-rush-ghost-town" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1okweIw01av3yNx_uCHXSFJv-K1CAws-q" data-background-size="contain">
+<h2>silver rush ghost town</h2>
+<aside class="notes">
+<p>silver rush ghost town<br><br>Exposure fusion of the upper part of Calico Ghost Town, Yermo, California, USA. Coordinates 34.9504683363, -116.864774557. Posted on 2015-11-14.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1pv8iwPrOCJMVvCSk1_BEhdgVCk2crAhW">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="cappadocian-balloon-flight" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1JRZSh-cRJowbzak49y6NYeBB4TQky7Tp" data-background-size="contain">
+<h2>Cappadocian balloon flight</h2>
+<aside class="notes">
+<p>Cappadocian balloon flight<br><br>Hot air balloon souvenirs, Göreme, Turkey. Coordinates 38.6413014448, 34.8178145885. Posted on 2015-11-10.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=11oKozksEC7zj7F7GUS0aXAAPsDwsxvGf">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="tragelaphus-eurycerus-isaaci" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1i81PIjr7qX92SCCLTubrQG05veB-SrBA" data-background-size="contain">
+<h2>Tragelaphus eurycerus isaaci</h2>
+<aside class="notes">
+<p>Tragelaphus eurycerus isaaci<br><br>Back of a mountain bongo (Tragelaphus eurycerus isaaci) at the Planckendael zoo, Mechelen, Belgium. Coordinates 50.9991973002, 4.52189898483. Posted on 2015-10-30.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1en7xIAmeDSKGnqDhkjQNbs1aNwul1zF0">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="glen-canyon-dam-overlook" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1o4FrrH1upfQOrZDgev1LJjeSeXSIs4iQ" data-background-size="contain">
+<h2>Glen Canyon Dam Overlook</h2>
+<aside class="notes">
+<p>Glen Canyon Dam Overlook<br><br>Tonemapped HDR panorama, taken from Glen Canyon Dam Overlook, Page, Arizona, USA. Coordinates 36.9240359333, -111.478723833. Posted on 2015-10-25.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1TKl9Cecbu9VjNGZ_oTMbIzCp6C_wTU13">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="equus-grevyi" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1Qmwh-fGZlE1hCb9x4SrGd9SrN_c16LSk" data-background-size="contain">
+<h2>Equus grevyi</h2>
+<aside class="notes">
+<p>Equus grevyi<br><br>Grévy’s zebra (Equus grevyi) at the Planckendael zoo, Mechelen, Belgium. Coordinates 51.0008059343, 4.5194554925. Posted on 2015-10-18.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1tRwjQ3BwjhszTyF_PxopssQKa0a1hY5f">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="camera-bike" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1B1kjuXH7oh-vfu5u6c-s6BG-xGbtPjBI" data-background-size="contain">
+<h2>Camera bike</h2>
+<aside class="notes">
+<p>Camera bike<br><br>Panned photograph of a camera bike in action, at the Amstel Gold Race 2015, Valkenburg, The Netherlands. Coordinates 50.8582650787, 5.82201905383. Posted on 2015-10-10.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1GrLFUO80P77C_aaYDHPk3MCKpc8F8-TU">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="into-the-mosque" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=113suhAXsYXHvmYR5_OIETnspGK0cUveB" data-background-size="contain">
+<h2>Into the Mosque</h2>
+<aside class="notes">
+<p>Into the Mosque<br><br>Slippers, in front of Karaçali Mahallesi Cami, Dalaman, Turkey. Coordinates 36.7511061867, 28.8077486157. Posted on 2015-10-03.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1UD6_GdVh9TL16vQw7XTrEmLuRpagGt8l">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="sus-cebrifons" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1zLZtka2FH3i0ZMj56-vUWoFHm7XJe_3q" data-background-size="contain">
+<h2>Sus cebrifons</h2>
+<aside class="notes">
+<p>Sus cebrifons<br><br>Visayan Warty Pig (Sus cebifrons) at the Planckendael zoo, Mechelen, Belgium. Coordinates 51.001410848, 4.511045558. Posted on 2015-10-03.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=17sT86MjUVS-4Os9A-Yk9JuZwG05ykS1h">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ghost-riders" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1xeecv41b2WSYcOjAErMnrTw3_Qz8LUmO" data-background-size="contain">
+<h2>Ghost riders</h2>
+<aside class="notes">
+<p>Ghost riders<br><br>Tonemapped HDR (with selective deghosting) of three bikers, Brigham’s Tomb, King on his Throne, Stagecoach, Bear &amp; Rabbit and Castle Rock, Monument Valley, Utah, USA. Coordinates 37.0547012738, -110.087656488. Posted on 2015-09-20.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1kMkjekO7nAHCxaI1qr5iDihxRKxAO5zt">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="kaweah-river" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=NA" data-background-size="contain">
+<h2>Kaweah River</h2>
+<aside class="notes">
+<p>Kaweah River<br><br>Tonemapped HDR of the Kaweah River, Three Rivers, California, USA. Coordinates 36.4155509667, -118.928131567. Posted on 2015-09-13.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="horseshoe-bend" class="slide level2" data-background-image="https://drive.google.com/uc?export=view&amp;id=1kZ_T3ae6LT4FZOsZ9yT-fKhqmKX1IXz2" data-background-size="contain">
+<h2>Horseshoe Bend</h2>
+<aside class="notes">
+<p>Horseshoe Bend<br><br>Tonemapped HDR panorama of Horseshoe Bend, Page, Arizona, USA. Coordinates 36.87934535, -111.51050935. Posted on 2015-09-06.<br><br><a href="https://drive.google.com/uc?export=download&amp;id=1_L6RekGg9lNlpMDh1F0IBCEo1GXkkMvU">Download.</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="footer footer-default">
+
+</div>
+</section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: false,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: true,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 5000,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'slow',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1920,
+
+        height: 1080,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        target: function(trigger) {
+          return trigger.previousElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        setTimeout(function() {
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto-reveal',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          let href = ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+        tippyHover(ref, function() {
+          var popup = window.document.createElement('div');
+          cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    });
+    </script>
+    
+
+</body></html>
