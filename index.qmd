@@ -18,6 +18,21 @@ format:
     header-includes: <link href="https://drive.google.com/uc?export=view&id=1CNYS-obKqLtIho0tmDoOfBTlSHJ9E-UR" rel="icon" type="image/png">
 ---
 
+## {.center}
+
+<div style="text-align:center">
+<b>Weekly</b>
+
+One hundred photographs
+  
+<small>[CC BY 4.0](https://creativecommons.org/licenses/by/4.0) by [Bart Rogiers](https://rogiersbart.github.io)</small>
+</div>
+
+::: {.notes}
+This project was a weekly photograph creative challenge that ran for 100 weeks,
+from 2015-09-06 to 2017-07-31.
+:::
+
 ```{r}
 #| cache: true
 #| output: asis
