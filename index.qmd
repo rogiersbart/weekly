@@ -12,10 +12,10 @@ format:
     transition-speed: slow
     background-transition: fade
     title-slide-attributes:
-      data-background-image: https://drive.google.com/uc?export=view&id=14b3dgCVKeEnKekpr4mz4EZbA7x3YaCNK
+      data-background-image: images/weekly.png
       data-background-size: 40%
     theme: [default, custom.scss]
-    header-includes: <link href="https://drive.google.com/uc?export=view&id=1CNYS-obKqLtIho0tmDoOfBTlSHJ9E-UR" rel="icon" type="image/png">
+    header-includes: <link href="images/weekly-icon.png" rel="icon" type="image/png">
 ---
 
 ## {.center}
